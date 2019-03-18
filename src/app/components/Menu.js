@@ -11,7 +11,6 @@ class Menu extends React.Component {
   render() {
     return (
       <div className={`menu ${this.state.open?'menu--open':''}`}>
-        <img src='/static/profile.jpg' className='menu__profile' onClick={()=> this.setState({open:!this.state.open})}/>
         <div className='menu__aside'>
         </div>
       </div>

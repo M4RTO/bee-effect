@@ -13,6 +13,8 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
   return prev;
 }, {});
 
+console.log(process.env.NODE_ENV);
+console.log(process.env.NODE_ENV !== "production");
 const plugins = [
     new FriendlyErrorsWebpackPlugin(),
     new ExtractTextPlugin({filename: 'main.css'}),
@@ -26,6 +28,7 @@ if ( !dev ) {
         openAnalyzer: false,
     } ) );
 }
+
 
 module.exports = {
     mode: dev ? "development" : "production",
